@@ -8,12 +8,12 @@ def run_pipeline():
     # Step 1: Merge raw data
     print("Step 1 — Merging raw data...")
     merged_df = data_loader.merge_data()
-    enriched_df = feature_engineering.engineer_features(merged_df)
     print(f"Data merged: {merged_df.shape[0]} rows, {merged_df.shape[1]} columns\n")
 
     # Step 1.1 : Run EDA
         
     print("step 1.1 - Exploratory Data Analysis (EDA)...")
+    enriched_df = feature_engineering.engineer_features(merged_df)
     df = eda.run_eda(merged_df)
 
     # Step 2: Feature engineering
