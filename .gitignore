@@ -6,10 +6,6 @@
 __pycache__/
 *.pyc
 
-# Data files
-data/raw/
-data/processed/
-
 # Jupyter
 .ipynb_checkpoints/
 
