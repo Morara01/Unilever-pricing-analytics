@@ -42,6 +42,8 @@ def run_pipeline():
     visualization.plot_price_vs_brand_strength()
     visualization.plot_price_vs_margin()
     visualization.plot_price_distribution()
+    visualization.plot_premium_probability()
+    visualization.plot_premium_segments()
 
     print("Charts created and saved in reports/charts\n")
 

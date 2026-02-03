@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.cluster import KMeans
 
 def assign_tier(score):
     if score <= 3:
@@ -26,11 +25,5 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
 
     # 4️ Binary Premium Flag
     df["Is_Premium"] = (df["Price_Tier"] == "Premium").astype(int)
-
-    # 5️ Clustering (Strategic segmentation)
-    kmeans = KMeans(n_clusters=3, random_state=42)
-    df["Cluster"] = kmeans.fit_predict(
-        df[["Brand_Strength_Score", "Base_Cost"]]
-    )
 
     return df
